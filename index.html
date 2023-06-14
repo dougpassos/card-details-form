@@ -1,33 +1,54 @@
-# Front-end Style Guide
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-## Layout
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+ 
+</head>
+<body>
+  <section id="area-cards">
+    <section class="front-card">
+      <img id="logo-card" src="./images/card-logo.svg" alt="">
+      <label id="lb-num-card">0000 0000 0000 0000</label> 
+      <label id="lb-name-card">Jane Appleseed</label>
+      <label id="lb-data-card">00/00</label>   
+    </section>
+    <section class="back-card">    
+      000
+    </section>
+  </section>
 
-The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
-
-## Colors
-
-### Primary
-
-- Linear gradient (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%)
-- Red (input errors): hsl(0, 100%, 66%)
-
-### Neutral
-
-- White: hsl(0, 0%, 100%)
-- Light grayish violet: hsl(270, 3%, 87%)
-- Dark grayish violet: hsl(279, 6%, 55%)
-- Very dark violet: hsl(278, 68%, 11%)
-
-## Typography
-
-### Body Copy
-
-- Font size: 18px
-
-### Font
-
-- Family: [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk)
-- Weights: 500
+  <section id="area-form">  
+    <form action="">    
+      <label for="">Cardholder Name</label>
+      <input placeholder="e.g. Jane Appleseed" type="text" name="" id="">
+      <label for="">Card Number</label>
+      <input placeholder="e.g. 1234 5678 9123 0000" type="text" name="" id="">
+      <label for="">Exp. Date (MM/YY)</label>
+      <input placeholder="MM" type="text">
+      <input placeholder="YY" type="text">
+      <label for="">CVC</label>
+      <input placeholder="e.g. 123" type="text">
+      <input type="submit" value="Confirm">  
+    </form>
+  
+  <!-- Completed state start -->
+    <section class="sucess-added-card">    
+      Thank you!
+      We've added your card details
+      <button type="button">Continue</button>
+    </section>
+  </section>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
