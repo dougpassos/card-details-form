@@ -17,7 +17,8 @@ body {
 }
 
 section#area-cards {
-  background-image: url('./images/bg-main-mobile.png') ;
+  background: no-repeat center url('./images/bg-main-mobile.png');
+  background-size: cover;
   width: auto;
   height: 30%;
 }
@@ -26,10 +27,9 @@ section#area-cards {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 20rem;
-  height: 10rem;
-  border-radius: .5rem;
-  background-image: url('./images/bg-card-front.png');
+  width: 15.5rem;
+  height: 8.5rem; 
+  background: no-repeat center/100% url('./images/bg-card-front.png');
   color: aliceblue;
 }
 
@@ -38,11 +38,50 @@ section#area-cards {
   padding: 1rem;
 }
 
+div.data-card-front{
+  display: grid;
+  grid-template-columns: auto auto ;
+  grid-template-rows: 1rem 2.5rem;
+}
+
+ label#lb-num-card {
+  grid-column: 1 / 3;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.2rem;
+}
+
+label#lb-name-card {
+  grid-column: 1 / 2;
+  justify-self: start;
+  align-self: center;  
+}
+
+label#lb-data-card {
+  grid-column: 2 / 3;
+  justify-self: end;
+  align-self: center;
+}
+
+label#lb-name-card,
+label#lb-data-card {
+  font-size: .75rem;
+  margin-inline: .75rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+
+section.back-card {
+  width: 15.5rem;
+  height: 8.5rem;
+  margin-top: 1rem;
+  background: no-repeat center/100% url('./images/bg-card-back.png');
+}
+
 section#area-form {
   display: flex;
-  flex-direction: column;
-   
-  
+  flex-direction: column;  
 }
 
 section#area-form form {
@@ -50,9 +89,8 @@ section#area-form form {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  padding-top: 5rem;
-  padding-inline: 1.5rem;
-
+  padding-top: 4rem;
+  padding-inline: 1rem;
 }
 
 section#area-form form > input {
@@ -65,9 +103,9 @@ section#area-form form > input {
 
 section#area-form div {  
   display: inline-grid ;
-  grid-template-columns: 5rem 5rem 5rem 5rem;
+  grid-template-columns: 5rem 5rem 4.5rem 4.5rem;
   grid-template-rows: 1.5rem 2rem;
-  gap: .4rem;
+  gap: .5rem;
 }
 
 section#area-form div label:first-child{
@@ -94,14 +132,30 @@ section#area-form div input:last-child{
 }
 
 @media (min-width: 400px) {
+  html {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: auto;
+  }
+
   body {
     flex-direction: row;
+    align-items: center;
+    justify-content: center;    
+    width: 95%;
+    height: 95%;    
   }
 
   section#area-cards {
     width: 30%;
+    height: 30rem;    
+  } 
+
+  section#area-form {    
+    width: 70%;
     height: 30rem;
-  }
-  
+  } 
 
 }
