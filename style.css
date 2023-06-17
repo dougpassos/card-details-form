@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --errors-red: hsl(0, 100%, 66%);
   --active-input-border: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
@@ -14,6 +19,7 @@
 body {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 section#area-cards {
@@ -101,11 +107,21 @@ section#area-form form > input {
   margin-bottom: .6rem;
 }
 
+.form-button{
+  background-color: var(--very-dark-violet);
+  color: var(--light-grayish-violet);
+  border-radius: .5rem;
+  font-weight:bold;
+  padding: .5rem;
+}
+
 section#area-form div {  
   display: inline-grid ;
-  grid-template-columns: 5rem 5rem 4.5rem 4.5rem;
+  width: auto;
+  padding: .1rem ;
+  grid-template-columns: 30% 28% 20% 20%;
   grid-template-rows: 1.5rem 2rem;
-  gap: .5rem;
+  gap: .3rem;
 }
 
 section#area-form div label:first-child{
@@ -131,7 +147,7 @@ section#area-form div input:last-child{
 
 }
 
-@media (min-width: 400px) {
+@media (min-width: 450px) {
   html {
     display: flex;
     flex-direction: column;
