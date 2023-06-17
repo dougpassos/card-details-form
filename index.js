@@ -33,6 +33,3 @@ const upExpDateYyCard = () => {
 const upCvcCard = () => {
   updateLabel(lbCardCvc, iptCardCvc )
 }
-
-
-
