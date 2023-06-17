@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Interactive card details form</title>
@@ -18,26 +17,26 @@
       <div class="data-card-front">
         <label id="lb-num-card">0000 0000 0000 0000</label> 
         <label id="lb-name-card">Jane Appleseed</label>
-        <label id="lb-data-card">00/00</label>   
+        <label id="lb-data-card"><span id="lb-spn-mm">00</span>/<span id="lb-spn-yy">00</span></label>  
       </div>
     </section>
     <section class="back-card">    
-      000
+      <label id="lb-card-cvc">000</label>
     </section>
   </section>
 
   <section id="area-form">  
     <form action="">    
       <label for="">Cardholder Name</label>
-      <input placeholder="e.g. Jane Appleseed" type="text" name="" id="">
+      <input oninput="upNameCard()" placeholder="e.g. Jane Appleseed" type="text" name="" id="ipt-card-name">
       <label for="">Card Number</label>
-      <input placeholder="e.g. 1234 5678 9123 0000" type="text" name="" id="">
+      <input oninput="upNumCard()" placeholder="e.g. 1234 5678 9123 0000" type="text" name="" id="ipt-card-number">
       <div>
         <label id="lb-date">Exp. Date (MM/YY)</label>
         <label id="lb-cvc">CVC</label>
-        <input placeholder="MM" type="text">
-        <input placeholder="YY" type="text">       
-        <input placeholder="e.g. 123" type="text">
+        <input oninput="upExpDateMmCard()" placeholder="MM" type="text" id="ipt-card-date-mm">
+        <input oninput="upExpDateYyCard()" placeholder="YY" type="text" id="ipt-card-date-yy">       
+        <input oninput="upCvcCard()" placeholder="e.g. 123" type="text" id="ipt-card-cvc">
       </div>      
       <input class="form-button" type="submit" value="Confirm">  
     </form>
@@ -48,8 +47,7 @@
       We've added your card details
       <button type="button">Continue</button>
     </section>
-  </section>
-  
-  
+  </section>  
+  <script type="text/javascript" src="./index.js"></script>
 </body>
 </html>
