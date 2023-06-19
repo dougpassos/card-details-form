@@ -9,27 +9,27 @@ const iptCardDateMm = document.getElementById("ipt-card-date-mm");
 const iptCardDateYy = document.getElementById("ipt-card-date-yy");
 const iptCardCvc = document.getElementById("ipt-card-cvc");
 
-const updateLabel = (label, input) => {
+function updateLabel(label, input) {
   let inputValue = input.value
   label.innerText = inputValue;
 }
 
-const upNameCard = () => {
+function upNameCard() {
   updateLabel(lbNameCard, iptCardName )
 };
 
-const upNumCard = () => {
+function upNumCard() {
   updateLabel(lbNumCard, iptCardNumber )
 };
 
-const upExpDateMmCard = () => {
+function upExpDateMmCard() {
   updateLabel(lbSpnMm, iptCardDateMm )
 }
 
-const upExpDateYyCard = () => {
+function upExpDateYyCard() {
   updateLabel(lbSpnYy, iptCardDateYy )
 }
 
-const upCvcCard = () => {
+function upCvcCard() {
   updateLabel(lbCardCvc, iptCardCvc )
 }
