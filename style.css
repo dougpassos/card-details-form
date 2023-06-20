@@ -123,7 +123,8 @@ section#area-form form > input {
   margin-bottom: .6rem;
 }
 
-.form-button{
+.form-button,
+#dig-error button{
   background-color: var(--very-dark-violet);
   color: var(--light-grayish-violet);
   border-radius: .5rem;
@@ -163,6 +164,37 @@ section#area-form div input:last-child{
 
 }
 
+#dig-error {
+  width: 53%;
+  height: 40%;
+  margin-inline: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  border: none;
+  border-radius: .5rem;
+}
+
+#dig-error section{
+  background-color: var(--light-grayish-violet);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  border-radius: .5rem;
+}
+
+#dig-error::backdrop {
+  opacity: .6;
+  background-color: rgb(0, 0, 0);
+  backdrop-filter: blur(5px);
+}
+
+#dig-error button{
+  width: 8rem;
+}
+
 @media (min-width: 450px) {
   html {
     display: flex;
@@ -198,5 +230,11 @@ section#area-form div input:last-child{
     padding-top: 2rem;
     max-width: 40%;
   }
+
+  #dig-error {
+    width: 35%;
+    height: 35%;    
+  }
+  
 
 }
