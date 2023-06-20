@@ -87,16 +87,19 @@ section.back-card {
 
 section#area-form {
   display: flex;
-  flex-direction: column;  
-}
-
-section#area-form form {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
+    
+}
+
+section#area-form form {
+  
+  display: flex;
+  flex-direction: column;  
   padding-top: 4rem;
   padding-inline: 1rem;
+  max-width: 95%;
 }
 
 section#area-form form > input {
@@ -172,6 +175,14 @@ section#area-form div input:last-child{
   section#area-form {    
     width: 70%;
     height: 30rem;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
   } 
+
+  section#area-form form {
+    padding-top: 2rem;
+    max-width: 40%;
+  }
 
 }
