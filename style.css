@@ -23,10 +23,16 @@ body {
 }
 
 section#area-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: no-repeat center url('./images/bg-main-mobile.png');
   background-size: cover;
   width: auto;
   height: 30%;
+  border-radius: .5rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
 }
 
 .front-card {
@@ -79,10 +85,17 @@ label#lb-data-card {
 
 
 section.back-card {
+  display: flex;
+  justify-content: end;
+  align-items: center;
   width: 15.5rem;
   height: 8.5rem;
   margin-top: 1rem;
   background: no-repeat center/100% url('./images/bg-card-back.png');
+}
+
+section.back-card label{
+  margin-right: 2rem;
 }
 
 section#area-form {
@@ -169,7 +182,8 @@ section#area-form div input:last-child{
 
   section#area-cards {
     width: 30%;
-    height: 30rem;    
+    height: 30rem;  
+    justify-content: center;  
   } 
 
   section#area-form {    
