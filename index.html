@@ -27,17 +27,17 @@
   </section>
 
   <section id="area-form">  
-    <form action="">    
+    <form id="formCard">    
       <label for="">Cardholder Name</label>
       <input oninput="upNameCard()" placeholder="e.g. Jane Appleseed" type="text" name="" id="ipt-card-name">
       <label for="">Card Number</label>
-      <input oninput="upNumCard()" placeholder="e.g. 1234 5678 9123 0000" type="text" name="" id="ipt-card-number">
+      <input oninput="upNumCard()" maxlength="16" placeholder="e.g. 1234 5678 9123 0000" type="text" name="" id="ipt-card-number">
       <div>
         <label id="lb-date">Exp. Date (MM/YY)</label>
         <label id="lb-cvc">CVC</label>
-        <input oninput="upExpDateMmCard()" placeholder="MM" type="text" id="ipt-card-date-mm">
-        <input oninput="upExpDateYyCard()" placeholder="YY" type="text" id="ipt-card-date-yy">       
-        <input oninput="upCvcCard()" placeholder="e.g. 123" type="text" id="ipt-card-cvc">
+        <input oninput="upExpDateMmCard()" maxlength="2" placeholder="MM" type="text" id="ipt-card-date-mm">
+        <input oninput="upExpDateYyCard()" maxlength="2" placeholder="YY" type="text" id="ipt-card-date-yy">       
+        <input oninput="upCvcCard()" maxlength="3" placeholder="e.g. 123" type="text" id="ipt-card-cvc">
       </div>      
       <input class="form-button" type="submit" value="Confirm">  
     </form>
