@@ -9,6 +9,8 @@ const iptCardDateMm = document.getElementById("ipt-card-date-mm");
 const iptCardDateYy = document.getElementById("ipt-card-date-yy");
 const iptCardCvc = document.getElementById("ipt-card-cvc");
 const formCard =  document.getElementById('formCard');
+const modalError = document.getElementById('dig-error');
+const modalButton = document.getElementById('modal-button');
 
 const regexCard = new RegExp(/(\d{4}\s\d{4}\s\d{4}\s\d{4})|(\d{16})/gm);
 const regexMM = new RegExp(/0[1-9]|1[0-2]/gm);
@@ -37,10 +39,15 @@ formCard.addEventListener("submit", (ev) => {
   if (nameCard && numCard && MMCard ) {
     console.log("OK");
   } else {
+    modalError.showModal();
     console.log("NOt OK");
   } 
  
 })
+
+modalButton.onclick = () => {
+  modalError.close();
+}
 
 function updateLabel(label, input) {
   let inputValue = input.value
