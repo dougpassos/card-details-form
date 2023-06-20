@@ -106,14 +106,21 @@ section#area-form {
     
 }
 
-section#area-form form {
-  
+.display-flex {
   display: flex;
+}
+
+.display-none {
+  display: none;
+}
+
+section#area-form form {
   flex-direction: column;  
   padding-top: 4rem;
   padding-inline: 1rem;
   max-width: 95%;
 }
+
 
 section#area-form form > input {
   width: auto;
@@ -158,10 +165,22 @@ section#area-form div input:last-child{
 }
 
 
-.sucess-added-card{
-  display: none;
+section#sucess-card {  
   flex-direction: column;
+  justify-content: space-between;   
+  align-items: center;
+  padding-top: 3rem;
+  padding-inline: 1rem;
+  max-width: 95%;
+}
 
+section#sucess-card *{
+  padding: .9rem;
+}
+
+#sucess-button{
+  margin-top: .5rem;
+  width: 8rem;
 }
 
 #dig-error {

@@ -27,7 +27,7 @@
   </section>
 
   <section id="area-form">  
-    <form id="formCard">    
+    <form id="formCard" class="display-flex">    
       <label for="">Cardholder Name</label>
       <input oninput="upNameCard()" placeholder="e.g. Jane Appleseed" type="text" name="" id="ipt-card-name">
       <label for="">Card Number</label>
@@ -42,13 +42,15 @@
       <input class="form-button" type="submit" value="Confirm">  
     </form>
     
-    <!-- Completed state start -->
-    <section class="sucess-added-card">    
-      Thank you!
-      We've added your card details
-      <button type="button">Continue</button>
+    <section id="sucess-card" class="display-none">
+      <img src="./images/icon-complete.svg
+      " alt="ico sucesso"> 
+      <h3>Obrigado!</h3>
+      <span>Adicionamos os detalhes do seu cartão</span>
+      <button id="sucess-button" class="form-button" type="button">OK</button>
     </section>
-  </section>  
+  </section>
+
   <dialog id="dig-error">
     <section>
       <img src="./images/icon-error.svg
@@ -56,7 +58,7 @@
       <h3>Dados Incorretos</h3>
       <p>Por favor corrigir</p>
       <button id="modal-button" type="button">OK</button>
-    </dialog>
-  </section>   
+    </section>   
+  </dialog>
 </body>
 </html>
